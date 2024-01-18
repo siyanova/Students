@@ -1,0 +1,34 @@
+﻿<Window x:Class="Students.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Students"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Name="ConnectionBack" Orientation="Horizontal">
+            <Button Content="Подключиться" Width="150" HorizontalAlignment="Left" Margin="20" Height="30" Click="Button_Click"/>
+            <Button Content="Отключиться" Width="150" HorizontalAlignment="Left" Margin="20" Height="30" Click="Button_Click_1"/>
+            <TextBlock Name="ConnectionText" Width="300" Margin="20" FontSize="15" VerticalAlignment="Center" Text="Сервер отключен" />
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <RadioButton Name="FullTable" Content="Вся таблица" Checked="FullTable_Checked"/>
+            <RadioButton Name="FIOStudent" Content="ФИО всех студентов" Checked="RadioButton_Checked"/>
+            <RadioButton Name="AllAvgMaks" Content="Всех средних оценок" Checked="AllAvgMaks_Checked"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Content="ФИО всех студентов с минимальной оценкой >, чем указанная"/>
+                <TextBox/>
+            </StackPanel>
+            <RadioButton Content="Название всех предметов с минимальными средними оценками."/>
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <TextBlock Name="output" Margin="30" FontSize="15"  />
+        </Grid>
+    </Grid>
+</Window>
