@@ -105,6 +105,8 @@ namespace Students
         {
             output.Text = "";
             string AllAvgMarks = @"SELECT AverageMarks FROM Marks";
+            AllAvgMarks = @"SELECT AverageMarks FROM Marks";
+            AllAvgMarks = @"SELECT AverageMarks FROM Marks";
             SqlCommand cmd = new SqlCommand(AllAvgMarks, connection);
 
             SqlDataReader sqlDataReader = cmd.ExecuteReader();
